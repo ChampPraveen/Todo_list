@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>To-Do List</h1>
+        <div class="input-container">
+            <input type="text" id="inp" placeholder="Enter a task">
+            <button onclick="add()">Add</button>
+        </div>
+        <ul id="new"></ul>
+    </div>
+    <script>
+        var inp = document.getElementById("inp");
+        var ul = document.getElementById("new");
+    
+        function add() {
+            var i = inp.value.trim();
+            if (i === "") {
+                alert("Please enter a task!");
+                return;
+            }
+    
+            var l = document.createElement("li");
+            l.textContent = i;
+    
+            var delBtn = document.createElement("button");
+            delBtn.textContent = "Del";
+            delBtn.classList.add("delete-btn");
+            delBtn.onclick = function(event) {
+                event.target.parentElement.remove();
+            };
+    
+            l.appendChild(delBtn);
+            ul.appendChild(l);
+            inp.value = "";
+        }
+    
+        // Listen for the "Enter" key press
+        inp.addEventListener("keypress", function(event) {
+            if (event.key === "Enter") {
+                add();
+            }
+        });
+    </script>
+    
+</body>
+</html>
