@@ -12,14 +12,3 @@ A simple yet stylish **To-Do List Web App** built using **HTML, CSS, and JavaScr
 ✅ **Smooth Animations & Hover Effects**  
 ✅ **Mobile Responsive Design**  
 
----
-
-## 🖼️ Preview
-
-![To-Do List Preview](preview.png)  
-*(Replace with an actual screenshot of your app)*
-
----
-
-## 📂 Project Structure
-
